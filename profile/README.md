@@ -1,4 +1,4 @@
-# <section align="center" style="display: flex; flex-direction: column">
+<section align="center" style="display: flex; flex-direction: column">
   <h1>Emmy.js</h1>
   <div>
     <img alt="npm" src="https://img.shields.io/npm/dt/emmy-dom"/>
