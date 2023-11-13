@@ -32,10 +32,12 @@ function Counter() {
     });
   }
 
-  return () => `<div>
-    <h1>Count: ${count()}</h1>
-    <button id="increment">+</button>
-  </div>`;
+  return () => /*html*/`
+    <div>
+      <h1>Count: ${count()}</h1>
+      <button id="increment">+</button>
+    </div>
+  `;
 }
 
 load(Counter, 'Counter');
