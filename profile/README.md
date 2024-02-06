@@ -21,24 +21,24 @@ It is still in an experimental phase, so it is not recommended to use it in prod
 
 ## Example: Counter
 ```javascript
-import { load } from "emmy-dom";
+import { load, html } from 'emmy-dom'
 
 function Counter() {
-  const [count, setCount] = this.useState(0);
+  const [count, setCount] = this.useState(0)
 
   this.callback = () => {
     this.querySelector('#increment').addEventListener('click', () => {
-      setCount(count() + 1);
-    });
+      setCount(count() + 1)
+    })
   }
 
-  return () => /*html*/`
+  return () => html`
     <div>
       <h1>Count: ${count()}</h1>
-      <button id="increment">+</button>
+      <button id='increment'>+</button>
     </div>
-  `;
+  `
 }
 
-load(Counter, 'Counter');
+load(Counter, 'Counter')
 ```
