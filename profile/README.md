@@ -26,11 +26,11 @@ import { load, html } from 'emmy-dom'
 function Counter() {
   const [count, setCount] = this.useState(0)
 
-  this.callback = () => {
+  this.useEffect(() => {
     this.querySelector('#increment').addEventListener('click', () => {
       setCount(count() + 1)
     })
-  }
+  }, ['didMount'])
 
   return () => html`
     <div>
