@@ -5,12 +5,12 @@
     <img alt="NPM" src="https://img.shields.io/npm/l/emmy-dom"/>
     <img alt="tests" src="https://github.com/emmyjs/emmy-dom/actions/workflows/vitest.yml/badge.svg"/>
   </div>
-  <i>A tiny simple front-end library for building web applications.</i>
+  <i>A tiny simple front-end library for building web applications using functional web components.</i>
 </section>
 <hr />
 
 ## Why Emmy.js?
-Emmy.js is a tiny simple front-end library for building web applications. It is based on the [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) standard.
+Emmy.js is a tiny simple front-end library for building web applications using functional web components. It is based on the [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) standard.
 It is specially designed for building web applications with server-side frameworks like Ruby on Rails, Django, Laravel, etc.
 
 <hr />
@@ -23,11 +23,11 @@ It is still in an experimental phase, so it is not recommended to use it in prod
 ```javascript
 import { load, html } from 'emmy-dom'
 
-function Counter() {
-  const [count, setCount] = this.useState(0)
+const counter = ({ el }) => {
+  const [count, setCount] = el.useState(0)
 
-  this.useEffect(() => {
-    this.querySelector('#increment').addEventListener('click', () => {
+  el.useEffect(() => {
+    el.querySelector('#increment').addEventListener('click', () => {
       setCount(count() + 1)
     })
   }, ['didMount'])
@@ -40,5 +40,5 @@ function Counter() {
   `
 }
 
-load(Counter, 'Counter')
+load(counter, 'Counter')
 ```
