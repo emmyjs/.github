@@ -30,7 +30,7 @@ const counter = ({ el }) => {
     el.querySelector('#increment').addEventListener('click', () => {
       setCount(count() + 1)
     })
-  }, ['didMount'])
+  }, [])
 
   return () => html`
     <div>
